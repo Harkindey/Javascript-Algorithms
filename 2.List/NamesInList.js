@@ -120,6 +120,8 @@ function moveTo(position) {
 function getElement() {
     return this.dataStore[this.pos];
 }
+// <----- END OF PROPERTY DECLARATION --->
+
 
 var names = new List();
 names.append("Clayton");
@@ -129,89 +131,25 @@ names.append("Jennifer");
 names.append("Bryan");
 names.append("Danny");
 
-// names.front();
-// print(names.getElement());
-//
-// names.next();
-// print(names.getElement());
-//
-// names.next();
-// names.next();
-// names.prev();
-// print(names.getElement());
+names.front();
+print(names.getElement());
 
-// for (names.front(); names.currPos() < names.length(); names.next()) {
+names.next();
+print(names.getElement());
+
+names.next();
+names.next();
+names.prev();
+print(names.getElement());
+
+console.log(names.front());
+
+//<----- TRAVERSE THRU A LIST ----->
+for (names.front(); names.currPos() < names.length(); names.next()) {
+    print(names.getElement());
+}
+//
+// //<----- TRAVERSE BACKWARD THRU A LIST ----->
+// for (names.end(); names.currPos() >= 0; names.prev()) {
 //     print(names.getElement());
 // }
-
-
-// var movies = read('films.txt').split("\n");
-//
-// function createArr(file) {
-//     var arr = read(file).split("\n");
-//     for (var i = 0; i < arr.length; ++i) {
-//         arr[i] = arr[i].trim();
-//     }
-//     return arr;
-// }
-//
-// var movieList = new List();
-// for (var i = 0; i < movies.length; ++i) {
-//     movieList.append(movies[i]);
-// }
-
-// function displayList(list) {
-//     for (list.front(); list.currPos() < list.length(); list.next()) {
-//         print(list.getElement());
-//     }
-// }
-
-function displayList(list) {
-    for (list.front(); list.currPos() < list.length(); list.next()) {
-        if (list.getElement() instanceof Customer) {
-            print(list.getElement()["name"] + ", " +
-                list.getElement()["movie"]);
-        } else {
-            print(list.getElement());
-        }
-    }
-}
-
-var Customers = new List();
-
-function Customer(name, movie) {
-  this.name = name;
-  this.movie = movie;
-}
-
-function checkOut(name, movie, filmList, customerList) {
-  if (movieList.contains(movie)) {
-    var c = new Customer(name, movie);
-    customerList.append(name, movie);
-    filmList.remove(movie);
-  }
-  else {
-    print(movie + " is not available.");
-  }
-}
-
-var movies = createArr("films.txt");
-var movieList = new List();
-var customers = new List();
-for (var i = 0; i <movies.length; ++i) {
-  movieList.append(movies[i]);
-}
-print("Available movies; \n");
-displayList(movieList);
-putstr("\nEnter your name: ");
-var name = readline();
-putstr("What movie would you like?");
-var movie = readline();
-checkOut(name, movie, movieList, customers);
-print("\nCustomer Rentals: \n");
-displayList(customers);
-// checkOut("Jane Doe", "The Godfather", movieList, customers);
-// print("\nCustomer Rentals: \n");
-// displayList(customers);
-print("\nMovies Now Available\n");
-displayList(movieList);
