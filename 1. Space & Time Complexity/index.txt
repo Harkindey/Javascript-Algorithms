@@ -1,0 +1,19 @@
+var hotels = [
+	{ price: 200, brand: 'Estin' },
+	{ price: 50, brand: 'Best Eastern' },
+	...
+	...
+	{ price: 175, brand: 'Radishin' },
+];
+
+find min and max
+
+ n^2	compare all numbers
+ 2n	Find min and max numbers
+ 2	Sorted list, find first and last
+
+ Name	    constant	logarithmic	    linear	quadratic	exponential
+ Notation	O(1)	    O(logn)	        O(n)	O(n^2)	    O(k^n)
+
+ Big O Notation
+  What do we do if we have multiple expressions/loops/etc?
