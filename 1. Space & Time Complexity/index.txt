@@ -39,4 +39,25 @@ The complexity differs depending on the input data, but we tend to weigh the wor
 We graph the performance of our algorithms with one axis being the amount of data, 
 normally denoted by 'n' and the other axis being the amount of time/space needed to execute completely.
 
+WHAT IS THE TC?
+var countChars = function(str){
+    var count = 0;
+    for(var i = 0; i < str.length; i++) {
+        count++;
+    }
+    return count;
+};
+countChars("dance");
+countChars("walk");
+---> I't Linear
 
+var countChars = function(str){
+    return str.length;
+};
+countChars("dance");
+countChars("walk");
+// How much more work would it take 
+// to get the length of 1 million 
+//char string?
+
+---> I't 1, (.length is just a property lookup, no Operation is done to get the result)
