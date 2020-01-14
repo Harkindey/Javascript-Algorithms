@@ -16,4 +16,12 @@ find min and max
  Notation	O(1)	    O(logn)	        O(n)	O(n^2)	    O(k^n)
 
  Big O Notation
-  What do we do if we have multiple expressions/loops/etc?
+What do we do if we have multiple expressions/loops/etc?
+
+Complexity	Operation
+O(1)		Running a statement
+O(1)		Value look-up on an array, object, variable
+O(logn)		Loop that cuts problem in half every iteration
+O(n)		Looping through the values of an array
+O(n^2)		Double nested loops
+O(n^3)		Triple nested loops
