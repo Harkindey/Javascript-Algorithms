@@ -1,3 +1,9 @@
+Time Complexity of an algorithm signifies the total time required by the program to run to completion. 
+The time complexity of algorithms is most commonly expressed using the big O notation.
+Big O notation gives us an industry-standard language to discuss the performance of algorithms. 
+Not knowing how to speak this language can make you stand out as an inexperienced programmer.
+Did you know there are other notations that are typically used in academic settings? Learn more here.
+
 var hotels = [
 	{ price: 200, brand: 'Estin' },
 	{ price: 50, brand: 'Best Eastern' },
@@ -25,3 +31,12 @@ O(logn)		Loop that cuts problem in half every iteration
 O(n)		Looping through the values of an array
 O(n^2)		Double nested loops
 O(n^3)		Triple nested loops
+
+Space Complexity
+Given what we have discovered about time complexity, can you guess how we can calculate space complexity?
+
+The complexity differs depending on the input data, but we tend to weigh the worst-case.
+We graph the performance of our algorithms with one axis being the amount of data, 
+normally denoted by 'n' and the other axis being the amount of time/space needed to execute completely.
+
+
