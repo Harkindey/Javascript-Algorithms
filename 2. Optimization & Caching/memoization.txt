@@ -8,7 +8,7 @@ const factorial = (n) => {
 factorial(35);
 factorial(36); // factorial(36) = factorial(35) * 36;
 
-EXERCISE
+EXERCISE 1
 // Task 1: Write a function, times10, that takes an argument, n, and multiples n times 10
 // a simple multiplication fn
 const times10 = (x) => x*10;
@@ -34,6 +34,34 @@ const memoTimes10 = (n) => {
 console.log('~~~~~~~~~~~~~~TASK 2~~~~~~~~~~~~~~');
 console.log('Task 2 calculated value:', memoTimes10(9));	// calculated
 console.log('Task 2 cached value:', memoTimes10(9));	// cached
+
+EXERCISE 2 
+
+const times10 = (n) => (n * 10);
+
+// Task 3: Clean up your global scope by moving your cache inside your function.
+// protip: Use a closure to return a function that you can call later.
+
+const memoizedClosureTimes10 = () => {
+    let cache = {};
+return (n) => {
+    if(!cache[n]){
+            cache[n] = times10(n)
+            return cache[n]
+        } else {
+            return cache[n];
+        }
+    }
+};
+
+const memoClosureTimes10 = memoizedClosureTimes10();
+console.log('~~~~~~~~~~~~~~TASK 3~~~~~~~~~~~~~~');
+try {
+  console.log('Task 3 calculated value:', memoClosureTimes10(9));	// calculated
+  console.log('Task 3 cached value:', memoClosureTimes10(9));	// cached
+} catch(e) {
+  console.error('Task 3:', e);
+}
 
 
 
