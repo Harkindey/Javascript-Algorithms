@@ -1,0 +1,1 @@
+Recursion is simply when a function calls itself; however it doesn't stop there.
