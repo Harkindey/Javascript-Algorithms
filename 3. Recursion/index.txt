@@ -1,1 +1,55 @@
 Recursion is simply when a function calls itself; however it doesn't stop there.
+for recursion we want to be able to loop mutiple times meet a base case and return.
+
+Call Stack Game
+1. Push called Fn on stack.
+2. Execute Fn body.
+
+until...
+... another fn is called:
+     Pause the current execution and start at step 1.
+... a return is hit:
+     Pop the current Fn off the stack.
+     Resume executing the previous Fn.
+
+var callMe = function() {
+  callMe();
+  callMe();
+  callMe('anytime');
+};
+callMe();
+
+---> keeps running, lead to Stackoverflow Error
+
+var callMe = function() {
+  return callMe();
+  callMe();
+  callMe('anytime');
+};
+callMe();
+
+---> also keeps running and leads to Stackoverflow Error
+
+var tracker = 0;
+var callMe = function() {
+  tracker++
+  if (tracker === 3) {
+      return 'loops!';
+  }
+  callMe('anytime');
+};
+
+callMe();
+
+---> return "undefine", but if we want loops to be push back int the call stack
+
+var tracker = 0;
+var callMe = function() {
+  tracker++
+  if (tracker === 3) {
+      return 'loops!';
+  }
+  return callMe('anytime');
+};
+
+callMe(); // loops
