@@ -53,3 +53,23 @@ var callMe = function() {
 };
 
 callMe(); // loops
+
+
+RECURSION IN 4 STEPS
+
+1. Identify base case(s).
+2. Identify recursive case(s).
+3. Return where appropriate.
+4. Write procedures for each case that bring you closer to the base case(s).
+
+var callMyself = function() {
+  if() {
+    // base case
+    return;
+  } else {
+    // recursive case
+    callMyself();
+  }
+  return;
+};
+
