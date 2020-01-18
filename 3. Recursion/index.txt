@@ -171,7 +171,7 @@ Accumulators Functions
 function joinElements(array, joinString) {
   function recurse(index, resultSoFar) {
     resultSoFar += array[index];
-    if(index === array.length - 1) {
+     
       return resultSoFar;
     } else {
       return recurse(index + 1, resultSoFar + joinString);
@@ -181,3 +181,19 @@ function joinElements(array, joinString) {
 }
 
 joinElements(['s','cr','t cod', ' :) :)'], 'e');
+
+EXERCISE -> Covert Accumulators case to iterative
+
+function joinElements(array, joinString) {
+  let newString =''
+
+  for(let i = 0; i < array.length; i++){
+    if(i === array.length - 1) return newString
+     let newadd = array[i]+joinString;
+     newString+=newadd;
+  }
+  return newString;
+}
+
+joinElements(['s','cr','t cod', ' :) :)'], 'e');
+
