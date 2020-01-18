@@ -197,3 +197,22 @@ function joinElements(array, joinString) {
 
 joinElements(['s','cr','t cod', ' :) :)'], 'e');
 
+
+// Task 1: Without peeking, write your own recursive factorial method
+function factorial(num) {
+  let result = 1;
+  function recurse(v){
+    if (v === 0){
+        return result;
+      } else {
+        result = result * v;
+        return recurse(v-1);
+    }
+  }
+  return recurse(num)
+}
+
+factorial(4);
+// Task 2: Use your memo function from the previous exercise to memoize your factorial method
+
+console.log(memoize(factorial)(5))
