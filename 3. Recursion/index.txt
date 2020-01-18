@@ -215,4 +215,38 @@ function factorial(num) {
 factorial(4);
 // Task 2: Use your memo function from the previous exercise to memoize your factorial method
 
-console.log(memoize(factorial)(5))
+but when i wanted to memoize had to make sure the memoized 
+function receives the result of each values being executed..
+SO here 
+
+
+-----
+const factorial =  memoize((v) => {
+    if (v === 0){
+        return 1;
+      } else {
+        return v * factorial(v-1);
+    }
+  })
+
+
+function memoize (cb) {
+  let cache = {}
+
+  return (n) => {
+    if(!cache[n]){
+      console.log('calculating')
+            cache[n] = cb(n)
+            return cache[n]
+        } else {
+          console.log('from cache')
+            return cache[n];
+        }
+  }
+}
+
+console.log(factorial(5));
+console.log(factorial(26));
+console.log(factorial(13));
+
+-----
