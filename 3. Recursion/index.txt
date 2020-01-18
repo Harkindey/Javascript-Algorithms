@@ -138,3 +138,7 @@ Recursion can always be implemented as a loop,
 but in some situations, believe it or not, it is simpler to use recursion
 
 Tail-Call Optimization ---> ES6 offers TCO, which allows some functions to be called without growing the call stack.
+
+COMMON PATTERNS FOR RECURSION
+- Wrapper Functions
+- Accumulators
