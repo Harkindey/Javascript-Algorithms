@@ -1,0 +1,5 @@
+Greedy algorithms always make the locally optimal choice!
+without considering the big picture.
+
+Best usage is when Computational data is too much
+you can't think of a solution but to choose a solution
