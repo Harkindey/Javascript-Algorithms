@@ -3,3 +3,46 @@ without considering the big picture.
 
 Best usage is when Computational data is too much
 you can't think of a solution but to choose a solution
+
+You are the banker in Monopoly with your family who has lost many of
+the game pieces so you only have bills in these denominations:
+
+$5 $10 \$25
+
+You need only pay out your family in the least number of bills possible
+so you don't run out before the game is over. Write a function that
+calculates the least number of bills required for any given dollar
+amount that is divisible by 5.
+
+Greedy Approach
+Write a function, makeChange, that returns the least number of coins that add up to that amount.
+
+coin values: 5, 10, 25
+input: 40 , output: 3 (25, 10, 5)
+input: 35, output 2 (25, 10)
+
+Solution
+
+const makeChange = (coins, amount) => {
+  coins.sort((a, b) => b - a);
+  let coinTotal = 0;
+  let i = 0;
+  while (amount > 0) {
+    if (coins[i] <= amount) {
+      amount -= coins[i];
+      coinTotal++;
+    } else {
+      i++;
+    }
+  }
+  return coinTotal;
+};
+
+makeChange([5, 10, 25], 50);
+
+BUT Would these values work with your greedy solution?
+coin values: 1, 6, 10
+input: 12
+
+Greedy Approach:
+Always subtract the largest coin possible from the current amount.
