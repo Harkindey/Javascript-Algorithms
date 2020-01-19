@@ -46,3 +46,8 @@ input: 12
 
 Greedy Approach:
 Always subtract the largest coin possible from the current amount.
+
+* Algorithmic Correctness
+Does your algorithm correctly solve the problem? *
+
+SO WE USE BRUTE FORCE BECAUSE GREEDY SEEMS CORRECT BUT SOMETIMES IT ISNT.
