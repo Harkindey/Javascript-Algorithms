@@ -1,0 +1,12 @@
+Dynamic programming is an optimization technique
+Dynamic Approach:
+Cache values to avoid repeated calculations
+
+DP Qualities:
+Optimal Substructure (tends to be recursive)
+
+Overlapping Subproblems
+DP vs Divide & Conquer
+
+DP Approaches:
+Top Down (recursive) vs Bottom Up (iterative)
