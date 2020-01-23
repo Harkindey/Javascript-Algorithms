@@ -1,4 +1,13 @@
-- Stack & Queues
-- Linked List
-- Hash Table
-- Array & String
+Intro To Our DS
+- Stacks & Queues
+- Linked Lists (how references to data works instead of having data by value)
+- Hash Tables
+- Arrays & Strings
+
+
+Stack
+ stores items in a last-in, first-out (LIFO) order.
+Queue
+ stores items in a first-in, first-out (FIFO) order.
+
+
