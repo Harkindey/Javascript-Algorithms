@@ -93,5 +93,7 @@ Flexible keys	    Unordered
                     Single-directional lookups
 
 
-
-
+Hash Table IRL
+{ }
+Map
+Set
