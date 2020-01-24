@@ -33,26 +33,24 @@ class Stack {
 	 * Returns the value at the end of the stack without removing it
 	 * @return {*} the last and newest value in the stack
 	 */
-	peek() {}
+	peek() {
+		return this._storage[this._length - 1];
+	}
 }
 
 const myStack = new Stack();
-
-console.log(myStack, typeof undefined);
-
 myStack.push('zero');
 myStack.push('one');
 
 // {_storage: {0:'zero', 1: 'one'}}
 // length: 2
 // }
-
-console.log(myStack);
 // // {_storage: {0:'zero'}}
 // // length: 1
 // // }
 console.log(myStack.pop());
 console.log(myStack);
+console.log(myStack.peek());
 console.log(myStack.pop());
 console.log(myStack);
 console.log(myStack.pop());
