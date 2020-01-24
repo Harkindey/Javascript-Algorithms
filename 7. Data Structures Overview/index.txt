@@ -39,10 +39,11 @@ on the ends
 -Flexible size	
 
 Linked List IRL
-Linked Lists are often the underlying data structure for a stack or queue.
-You can implement a Least Recently Used cache using a linked list.
-Hash tables often use linked lists to handle collisions(more on this later)
+- Linked Lists are often the underlying data structure for a stack or queue.
+- You can implement a Least Recently Used cache using a linked list.
+- Hash tables often use linked lists to handle collisions(more on this later)
 
+- SINGLY LINKED LIST
 const linkedlist = {
   head: {
     value: 1
@@ -55,7 +56,33 @@ const linkedlist = {
     }
   }
 }
+{
+    value: 1,
+    next: {POINTER},
+}
 
+-- DOUBLY LINKED LIST
+
+const linkedlist = {
+  head: {
+    value: 1
+    next: {
+      value: 2
+      previous: {POINTER}
+      next: {
+        value: 3
+        next: null (tail)
+        previous: {POINTER}
+      }
+    }
+  }
+}
+
+{
+    value: 1,
+    next: {POINTER},
+    previous: {POINTER},
+}
 
 
 
