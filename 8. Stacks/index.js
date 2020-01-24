@@ -20,7 +20,12 @@ class Stack {
 	 * Removes the value at the end of the stack and returns it
 	 * @return {*} the last and newest value in the stack
 	 */
-	pop() {}
+	pop() {
+		let value = this._storage[this._length - 1];
+		delete this._storage[this._length - 1]; // or this._storage[this._length - 1] = undefined
+		this._length--;
+		return value;
+	}
 	/*
 	 * Returns the value at the end of the stack without removing it
 	 * @return {*} the last and newest value in the stack
@@ -40,8 +45,8 @@ myStack.push('one');
 // }
 
 console.log(myStack);
-
-// myStack.pop();
 // // {_storage: {0:'zero'}}
 // // length: 1
 // // }
+console.log(myStack.pop());
+console.log(myStack);
