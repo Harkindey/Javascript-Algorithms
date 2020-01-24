@@ -6,8 +6,32 @@ Intro To Our DS
 
 
 Stack
- stores items in a last-in, first-out (LIFO) order.
+    stores items in a last-in, first-out (LIFO) order.
 Queue
- stores items in a first-in, first-out (FIFO) order.
+    stores items in a first-in, first-out (FIFO) order.
+Pros of Stack and Queues
+    Fast operations
+
+Stack & Queue IRL
+JavaScript engines have a call stack and message queue that executes your code at runtime
+When you hit 'undo' in your text editor or 'back' in your browser, you are using a stack
+
+const stack = [1,2,3,4];
+stack.push(5); 
+// [1,2,3,4,5]
+stack.pop();
+// -> 5
+// [1,2,3,4]
+
+const queue = [1,2,3,4];
+queue.enqueue(5); 
+// [1,2,3,4,5]
+queue.dequeue();
+// -> 1
+// [2,3,4,5]
+
+
+
+
 
 
