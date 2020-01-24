@@ -95,5 +95,5 @@ Flexible keys	    Unordered
 
 Hash Table IRL
 { }
-Map
-Set
+Map -> key, value pair (any datatype)
+Set -> doesnt save value, saves only the property name (string,number,object)
