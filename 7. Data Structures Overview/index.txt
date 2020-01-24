@@ -30,6 +30,32 @@ queue.dequeue();
 // -> 1
 // [2,3,4,5]
 
+Linked List
+organizes items sequentially, with each item storing a pointer to the next
+
+ Pros	               Cons
+-Fast operations     -Costly lookups
+on the ends	
+-Flexible size	
+
+Linked List IRL
+Linked Lists are often the underlying data structure for a stack or queue.
+You can implement a Least Recently Used cache using a linked list.
+Hash tables often use linked lists to handle collisions(more on this later)
+
+const linkedlist = {
+  head: {
+    value: 1
+    next: {
+      value: 2
+      next: {
+        value: 3
+        next: null (tail)
+      }
+    }
+  }
+}
+
 
 
 
