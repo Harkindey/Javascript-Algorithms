@@ -21,10 +21,15 @@ class Stack {
 	 * @return {*} the last and newest value in the stack
 	 */
 	pop() {
-		let value = this._storage[this._length - 1];
-		delete this._storage[this._length - 1]; // or this._storage[this._length - 1] = undefined
-		this._length--;
-		return value;
+		//what if this._storage is empty
+		if (this._length) {
+			let value = this._storage[this._length - 1];
+			delete this._storage[this._length - 1]; // or this._storage[this._length - 1] = undefined
+			this._length--;
+			return value;
+		} else {
+			return new Error('Stack is Empty');
+		}
 	}
 	/*
 	 * Returns the value at the end of the stack without removing it
@@ -35,7 +40,7 @@ class Stack {
 
 const myStack = new Stack();
 
-console.log(myStack);
+console.log(myStack, typeof undefined);
 
 myStack.push('zero');
 myStack.push('one');
@@ -48,5 +53,9 @@ console.log(myStack);
 // // {_storage: {0:'zero'}}
 // // length: 1
 // // }
+console.log(myStack.pop());
+console.log(myStack);
+console.log(myStack.pop());
+console.log(myStack);
 console.log(myStack.pop());
 console.log(myStack);
