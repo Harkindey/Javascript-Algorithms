@@ -84,6 +84,13 @@ const linkedlist = {
     previous: {POINTER},
 }
 
+Hash Table
+organizes data for quick look up on values for a given key
+
+Pros	            Cons
+Fast lookups	    Slow worst-case lookups
+Flexible keys	    Unordered
+                    Single-directional lookups
 
 
 
