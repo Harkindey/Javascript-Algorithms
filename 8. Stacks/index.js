@@ -27,8 +27,6 @@ class Stack {
 			delete this._storage[this._length - 1]; // or this._storage[this._length - 1] = undefined
 			this._length--;
 			return value;
-		} else {
-			return new Error('Stack is Empty');
 		}
 	}
 	/*
