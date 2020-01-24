@@ -97,3 +97,11 @@ Hash Table IRL
 { }
 Map -> key, value pair (any datatype)
 Set -> doesnt save value, saves only the property name (string,number,object)
+
+
+Array
+organizes items sequentially in memory
+
+Pros	        Cons
+Fast lookups	Slow insert
+Fast appends	Slow deletes
