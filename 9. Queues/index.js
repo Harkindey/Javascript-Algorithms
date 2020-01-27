@@ -14,7 +14,8 @@ class Queue {
 	 */
 	enqueue(value) {
 		// TODO: typechecking, input validation
-		this._storage[this._length] = value;
+		let lastIndex = this._length + this._headIndex;
+		this._storage[lastIndex] = value;
 		this._length++;
 	}
 
