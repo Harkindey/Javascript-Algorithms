@@ -37,7 +37,13 @@ class LinkedList {
 	 * @param {*} value - the value to search for
 	 * @return {boolean} - true if value is found, otherwise false
 	 */
-	contains() {}
+	contains(value) {
+		let currentNode = this.head;
+		while (currentNode.value !== this.tail) {
+			currentNode = currentNode.next;
+		}
+		return currentNode.value === value;
+	}
 	/*
 	 * Checks if a node is the head of the linked list
 	 * @param {{prev:Object|null, next:Object|null}} node - the node to check
