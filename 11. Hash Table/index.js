@@ -1,6 +1,6 @@
 class HashTable {
 	constructor() {
-		this.storage = [];
+		this._storage = [];
 	}
 	/*
 	 * Inserts a new key-value pair
