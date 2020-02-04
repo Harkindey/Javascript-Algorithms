@@ -22,7 +22,16 @@ class LinkedList {
 	 * Removes the value at the end of the linked list
 	 * @return {*} - the removed value
 	 */
-	removeTail() {}
+	removeTail() {
+		//loop and find node before tail
+		// node.next === this.tail
+		let currentNode = this.head;
+		while (currentNode.next !== this.tail) {
+			currentNode = currentNode.next;
+		}
+		currentNode.next = null;
+		this.tail = currentNode;
+	}
 	/*
 	 * Searches the linked list and returns true if it contains the value passed
 	 * @param {*} value - the value to search for
@@ -63,4 +72,12 @@ console.log(myList);
 // {
 // 	head: { value: 1, next: { value: 2, next: { value: 3, next: null}}},
 // 	tail: { value: 3, next: null}
+// }
+
+myList.removeTail();
+console.log(myList);
+
+// {
+// 	head: { value: 1, next: { value: 2, next:null}},
+// 	tail: { value: 2, next: null}
 // }
