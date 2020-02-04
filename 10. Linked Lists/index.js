@@ -96,3 +96,8 @@ myList.removeNext(prevNode);
 // a external function that can be used by other datasctructures so you pass in the structure
 // But structure would be given
 function removeNext(list, prevNode) {}
+
+// NB :
+// - Being able to reference your head and tail is vital to the survival of the linkedlist
+// - Backward interations is for DoublyLinkedList
+// - Computer doesnt care about complexity, we care cause of the way to wrap our heads round it.
