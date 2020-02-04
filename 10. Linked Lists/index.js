@@ -81,3 +81,8 @@ console.log(myList);
 // 	head: { value: 1, next: { value: 2, next:null}},
 // 	tail: { value: 2, next: null}
 // }
+
+myList.removeNext(prevNode);
+// a external function that can be used by other datasctructures so you pass in the structure
+// But structure would be given
+function removeNext(list, prevNode) {}
