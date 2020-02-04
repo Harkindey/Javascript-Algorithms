@@ -1,12 +1,13 @@
 class LinkedList {
-	constructor() {
-		this.storage = {};
+	constructor(value) {
+		this.head = { value, next: null };
+		this.tail = this.head;
 	}
 	/*
 	 * Inserts a new value to the end of the linked list
 	 * @param {*} value - the value to insert
 	 */
-	insert() {}
+	insert(value) {}
 	/*
 	 * Deletes a node
 	 * @param {*} node - the node to remove
@@ -37,3 +38,24 @@ class LinkedList {
 	 */
 	isTail() {}
 }
+
+const myList = new LinkedList(1); // initiate? (with a value or empty)
+console.log(myList);
+// {
+// 	head: { value: 1, next: null},
+// 	tail: { value: 1, next: null}
+// }
+
+myList.insert(2);
+
+// {
+// 	head: { value: 1, next: { value: 2, next: null}},
+// 	tail: { value: 2, next: null}
+// }
+
+myList.insert(3);
+
+// {
+// 	head: { value: 1, next: { value: 2, next: { value: 3, next: null}}},
+// 	tail: { value: 3, next: null}
+// }
