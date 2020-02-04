@@ -7,7 +7,11 @@ class LinkedList {
 	 * Inserts a new value to the end of the linked list
 	 * @param {*} value - the value to insert
 	 */
-	insert(value) {}
+	insert(value) {
+		let node = { value, next: null };
+		this.tail.next = node;
+		this.tail = node;
+	}
 	/*
 	 * Deletes a node
 	 * @param {*} node - the node to remove
@@ -47,13 +51,14 @@ console.log(myList);
 // }
 
 myList.insert(2);
-
+console.log(myList);
 // {
 // 	head: { value: 1, next: { value: 2, next: null}},
 // 	tail: { value: 2, next: null}
 // }
 
 myList.insert(3);
+console.log(myList);
 
 // {
 // 	head: { value: 1, next: { value: 2, next: { value: 3, next: null}}},
