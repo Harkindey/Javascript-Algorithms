@@ -43,13 +43,17 @@ class LinkedList {
 	 * @param {{prev:Object|null, next:Object|null}} node - the node to check
 	 * @return {boolean} - true if node is the head, otherwise false
 	 */
-	isHead() {}
+	isHead(node) {
+		return node === this.head;
+	}
 	/*
 	 * Checks if a node is the tail of the linked list
 	 * @param {{prev:Object|null, next:Object|null}} node - the node to check
 	 * @return {boolean} - true if node is the tail, otherwise false
 	 */
-	isTail() {}
+	isTail(node) {
+		return node === this.tail;
+	}
 }
 
 const myList = new LinkedList(1); // initiate? (with a value or empty)
