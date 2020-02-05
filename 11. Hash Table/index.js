@@ -34,3 +34,9 @@ class HashTable {
 		return sum % n;
 	}
 }
+
+const myHT = new HashTable();
+
+console.log(myHT);
+
+myHT.insert('a', 1);
