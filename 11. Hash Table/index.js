@@ -50,3 +50,5 @@ myHT.insert('a', 1);
 // HashTable {_storage: [0,0,0,['a',1], 0,0,0]}
 myHT.insert('b', 1);
 // HashTable {_storage: [0,0,0,[['a',1], ['b',2]], 0,0,0]}
+
+console.log(myHT);
