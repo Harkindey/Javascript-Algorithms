@@ -84,20 +84,29 @@ const linkedlist = {
     previous: {POINTER},
 }
 
-Hash Table
-organizes data for quick look up on values for a given key
+Hash Table (Not Ordered - we dont sort it)  
+- Very good for fast look up and having keys that are flexible
+- organizes data for quick look up on values for a given key
+- quick assertion
 
 Pros	            Cons
 Fast lookups	    Slow worst-case lookups
 Flexible keys	    Unordered
                     Single-directional lookups
 
+hashing function takes a string, hash it to numerical value its a Pure function.
+so hash function gives numerical value in some range , and the range is the size of the hash table
+
+stategries to make bigger - once half full you double it and rehash the keys
+
+ 1) Hash function - How it works.
+ 2) Collisions - When it occurs.
+ 3) Resizing - When to resize.
 
 Hash Table IRL
 { }
 Map -> key, value pair (any datatype)
 Set -> doesnt save value, saves only the property name (string,number,object)
-
 
 Array
 organizes items sequentially in memory
