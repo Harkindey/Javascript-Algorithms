@@ -28,7 +28,11 @@ class HashTable {
 	 * @param {string} key - the key to search for
 	 * @return {*} - the value associated with the key
 	 */
-	retrieve() {}
+	// HashTable {_storage: [0,0,0,[['a',1], ['b',2]], 0,0,0]}
+	// Amontized where worst case time complexity isn't consider cause it isnt helpful
+	retrieve(key) {
+		const index = this._hash(key, this._tableSize);
+	}
 	/*
 	 * Hashes string value into an integer that can be mapped to an array index
 	 * @param {string} str - the string to be hashed
