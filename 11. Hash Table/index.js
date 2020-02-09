@@ -2,6 +2,8 @@ class HashTable {
 	constructor(val) {
 		this._storage = [];
 		this._tableSize = val;
+		// once 50% full resize it. and rerun hashfunction
+		this.inputSize = 0;
 	}
 	/*
 	 * Inserts a new key-value pair
